@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage[a4paper,left=3cm,right=3cm,top=2cm,bottom=4cm,bindingoffset=5mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{pst-all}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\title{Seminararbeit über die komplexe Ordnung hinter dem Chaos}
+\author{Selina El Gaziri}
+\date{2018}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Grundoperationen der komplexen Zahlen}
+
+\section{Chaos in der Mathematik}
+
+\section{Fraktale und die komplexen Zahlen}
+
+\subsection{Mengen nach der Iterationsvorschrift $z_{n+1}={z_{n}}^2$ }
+\text{Abhängig vom Startwert $z_0$ betrachten wir nun die verschiedenen Fälle am Einheitskreis:}
+Man berechnet für die Näherung $ z_1={z_0}^2 => z_2={z_1}^2 => ... => z_{n+1}={z_{n}}^2 =>$
+\subsubsection{Gefangenenmenge G_z}
+\newline \text{Startwert kleiner als 1; } $|z| = x + y \cdot j < 1$ 
+\newline
+
+\noindent
+\begin{tabularx}{10cm}{X|X|X|X}
+z_{n} = & x & y &  $<1$\\
+\hline
+z_{0} = & 0,60000 & 0,20000 j & = 0,63250\\
+\hline
+z_{1} = & 0,32000 & 0,24000 j & = 0,40000\\
+\hline
+z_{2} =  & 0,04480 & 0,15360 j & = 0,16000\\
+\hline
+z_{3} = & -0,02159 & 0,01376 j & = 0,02560\\
+\hline
+z_{4} = & 0,00028	& -0,00059 j & = 0,00070\\
+\hline
+z_{5} = & 0,00000 & 0,00000 j & = 0,00000\\
+\hline
+z_{6} = & 0,00000 & 0,00000 j & = 0,00000\\
+\end{tabularx}
+$z_{n+1} \rightarrow 0$
+\newline
+\justyifying
+\newline Die Zahlenfolge konvergiert gegen 0 und verlässt den Einheitskreis nicht , wie man durch die Zeigermultiplikation sehen kann, sind alle $ z_0   \in ]-1;1[$ eine Gefangenenmenge $G_z$.
+\subsubsection{Fluchtmenge F_z}
+Startwert größer als 1; $|z| = x + y \cdot j > 1$
+\newline
+\begin{tabularx}{10cm}{X|X|X|X}
+z_{n} = & x & y & $> 1$\\
+\hline
+z_{0} = & 2,10  & 0,60 j & = 2,18\\
+\hline
+z_{1} = & 4,05 & 2,52 j & = 4,77\\
+\hline
+z_{2} = & 10,5 & 20,41 j & = 22,75\\
+\hline
+z_{3} = & -315,61 & 410,37 j & = 517,69\\
+\hline
+z_{4} = & -68794,48 & -259027,73 j & = 268007,55\\
+\end{tabularx}
+$z_{n+1} \rightarrow \infty$
+\newline
+\newline
+Für $z_0>1$ divergiert die Zahlenfolge bestimmt gegen unendlich, und "flüchtet" vor dem Einheitskreis, für $z_0  \in ]- \infty ;-1[ \cup ]1;\infty[$ existiert eine Fluchtmenge.
+\subsubsection{Juliamenge J_z}
+$|z| = x + y \cdot j = 1$
+\newline
+\begin{tabularx}{10cm}{X|X|X|X}
+z_{n} = & x & y & = 1\\
+\hline
+z_{0} = & 0,60000  & 0,80000 j & = 1\\
+\hline
+z_{1} = & -0,28000 & 0,96000 j & = 1\\
+\hline
+z_{2} = & -0,84320 & -0,53760 j & = 1\\
+\hline
+z_{3} = & 0,42197 & 0,90661 j & = 1\\
+\hline
+z_{4} = & -0,64388 & 0,76513 j & = 1\\
+\hline
+z_{5} = & -0,17084	& -0,98530 j & = 1\\
+\hline
+z_{6} = & -0,94163 & 0,33666 j & = 1\\
+\end{tabularx}
+$z_{n+1} \rightarrow 1$
+\newline
+\newline 
+Beträgt $z_0$ genau 1, so ist die Zahlenfolge beschränkt auf 1 und bildet hier den Rand des Einheitskreises. So ist die Beschränkte Menge allgemein der Rand zwischen einer Gefangenenmenge und Fluchtmenge.
+
+\subsection{Juliamengen J}
+Erweitern wir unser Polynom 2. Grades noch um die Konstante c $ z_{n+1}={z_{n}}^2 +c (c \in \mathbb{C})$ so erhalten wir für jedes c eine bestimmte Randmenge. Diese nach dem Entdecker Gaston Julia Benannten Grenzverläufe, als auch ihr Inneres, heißen Juliamengen und stellen einen Zusammenhang in der Chaotischen Iteration da.
+%Betrachten wir die Beschränkte Menge von $z_{n+1}={z_{n}}^2$ etwas genauer so stellen wir fest das
+%$(f) =[z \in C:fk(z)9∞]$
+\newline Z_{n+1}={Z_{n}}^2 + C 
+\newline n \in \mathbb{N}_{0};Z_n,C \in \mathbb{C}
+\newline Z_0=0 =>  Z_1 = C
+
+\subsection{Mandelbrotmenge M}
+\newline
+\text{Benoit 1980,}
+$M = [c \in \mathbb{C} / \lim\limits_{n \rightarrow \infty}{|({f_{C}}^{n}(z))|< \infinity ; z_{0}=0  }]$
+\newline Ist die Menge aller Punkte C für die Z=Z*Z + C immer innerhalb des kreises mit r =2 um die Ursprung leid egt 
+\newline z \rightarrow z2+c 
+\newline wobei\,die\, Iteration\, bei\, dem\, Ursprung\, z_{0}=0\, der Komplexen\, Zahlenebene\, startet\, und\, ist\, die\, Menge\, die\, nicht\, gegen\, \infinity streben
+
+
+G_{C} = [z0 \in C | z0 \rightarrow z02 + c \rightarrow ... ist beschränkt]
+
+\subsection{Logistische Gleichung und das Feigenbaumdiagramm}
+
+\subsection{Graphische Darstellung}
+
+\subsubsection{Iterationstiefen}
+
+\subsubsection{Apfelmännchen}
+
+\subsubsection{Juliamengen}
+
+\end{document}
